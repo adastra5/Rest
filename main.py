@@ -6,6 +6,7 @@ app = Flask(__name__, static_url_path='')
 def home():
    return render_template('index.html')
 
+
 @app.route('/static/<path:path>')
 def send_js(path):
     return send_from_directory('static', path)

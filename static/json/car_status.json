@@ -1,0 +1,8 @@
+{
+    "stateofcharge": {
+        "value": 78,
+        "retrievalstatus": "VALID",
+        "timestamp": 1639235362,
+        "unit": "PERCENT"
+    }
+}
