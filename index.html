@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Cover Template · Bootstrap v4.6</title>
+    <title>Rest</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/">
 
@@ -44,47 +44,65 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"> 
         <header class="masthead mb-auto">
             <div class="inner">
-            <h3 class="masthead-brand">Cover</h3>
+            <h3 class="masthead-brand">Rest</h3>
             </div>
         </header>
 
         <main role="main" class="inner cover">
+            <div id="batteryWarning" class=""><!--Battery warning start-->
             <h1 class="cover-heading" id="warningText">Your battery is low.</h1>
             <p class="lead" id="infoText">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
             <div class="container">
                 <div class="row" id="twoButtons1"> <!--warning screen-->
                     <div class="col-6" >    
                         <p class="lead">
-                        <a href="#" onclick="callHelper()" id="callButton" class="btn btn-lg btn-secondary">Call a x person</a>
+                        <a href="#" onclick="callHelperr()" id="callButton" class="btn btn-lg btn-secondary">Your Rest Asistant</a>
                         </p>
                     </div>
                     <div class="col-6">    
                         <p class="lead">
-                        <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-lg btn-secondary">Find the nearest station</button>
+                        <button href="#" onclick="nearestStations()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-lg btn-secondary">Find the nearest station</button>
                         </p>
+                    </div>
+                </div>
+                <div class="row d-none" id="nearestStation"> <!--nearest station-->
+                    <div class="container">
+                        <div class="panel panel-primary">
+                        <h1 class="panel-heading mb-3">Nearest Stations</h1>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24075.295255577996!2d28.98778279323639!3d41.03812055007988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snearest%20charging%20station%20locations!5e0!3m2!1str!2str!4v1639246442018!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="row d-none" id="secondStep"> <!--Date Time picker-->
                     <div class="container">
                         <div class="panel panel-primary">
                         <h1 class="panel-heading mb-3">Schedule an Appointment</h1>
+                        <h4 class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur sunt, ut sequi unde quisquam neque veritatis ullam culpa est architecto?</h4>
                             <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Date</label>
-                                        <input type="text" class="form-control" name="email" id="appointmentDate">
+                                        <input type="date" class="form-control" name="email" id="appointmentDate">
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
-                                        <label class="control-label" id="appointmentTime">Time</label>
+                                        <label class="control-label" >Time</label>
                                         <div class='input-group date' id='datetimepicker1'>
-                                        <input type='text' class="form-control" />
+                                        <input type='time' class="form-control" id="appointmentTime" />
                                         <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                         </span>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label">Location</label>
+                                        <input type="text" value="KTO Karatay Üniversitesi - Akabe, Alaaddin Kap Cd. No:130, 42020 Karatay/Konya" class="form-control" name="location" id="location">
                                     </div>
                                 </div>
                             </div>
@@ -102,12 +120,14 @@
                                     <div class="card-body">
                                     <h2 class="card-title">Your Appoinmet is Scheduled</h2>
                                     <p class="card-text" id="appointmentInfo">
-                                        <ul class="list-unstyled">
+                                        <ul class="list-unstyled lead">
                                             <li id="dateInfo"></li>
                                             <li id="timeInfo"></li>
+                                            <li id="locationInfo"></li>
+                                            <li>Your Rest assistant : Tunahan Türkmen</li>
                                         </ul>
                                     </p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" onclick="goingHomepage()" class="btn btn-primary">Go Homepage</a><!--Daha sonra anasayfaya dönderecek!!-->
                                     </div>
                                 </div>
                             </div>
@@ -115,6 +135,33 @@
                     </div>
                 </div>
             </div>
+            </div> <!--battery warning end-->
+            <div id="statusWarning" class="d-none"> <!--status warning start-->
+                <h1 class="cover-heading" id="warningText2">Your tire pressure is low!</h1>
+                <p class="lead" id="infoText2">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+                <div class="container">
+                    <div class="row" id="twoButtons2"> <!--warning screen-->
+                        <div class="col-6" >    
+                            <p class="lead">
+                            <a href="#" onclick="callHelperr()" id="callButton" class="btn btn-lg btn-secondary">Call a x person</a>
+                            </p>
+                        </div>
+                        <div class="col-6">    
+                            <p class="lead">
+                            <button href="#" onclick="nearestServices()" class="btn btn-lg btn-secondary">nearest services.</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row d-none" id="nearestServices"> <!--nearest station-->
+                        <div class="container">
+                            <div class="panel panel-primary">
+                            <h1 class="panel-heading mb-3">Nearest Stations</h1>
+                            <iframe class="d-flex justify-content-center" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d48129.893211888986!2d28.978893343934182!3d41.0664061242123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snearest%20mercedes%20benz%20service%20center!5e0!3m2!1str!2str!4v1639248749421!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div><!--car status warning end-->
         </main>
 
         <footer class="mastfoot mt-auto">
@@ -124,11 +171,6 @@
         </footer>
     </div>
 
-    <script>
-        $(function () {
-        $('#datetimepicker1').datetimepicker();
-        });
-    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
