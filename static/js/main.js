@@ -129,7 +129,7 @@ function deliveryLast(){
     let getLocation = document.querySelector("#locationLast")
     localStorage.setItem("locationLast", getLocation.value)
     let secondStep = document.querySelector("#deliveryManual").classList.add("d-none")
-    let thirdStep = document.querySelector("#deliveryInfoLast").classList.remove("d-none")
+    let thirdStep = document.querySelector("#diLast").classList.remove("d-none")
     let dateInfo = document.querySelector("#dateInfoDelivery").innerHTML = `<span class="font-weight-bold">See you on </span class="font-weight-bold"> ${localStorage.getItem("dateLast")}`
     let timeInfo = document.querySelector("#timeInfoDelivery").innerHTML = `<span class="font-weight-bold">at </span class="font-weight-bold"> ${localStorage.getItem("timeLast")}`
     let locationInfo = document.querySelector("#locationInfoDelivery").innerHTML = `<span class="font-weight-bold">in </span class="font-weight-bold"> ${localStorage.getItem("locationLast")}`
@@ -140,6 +140,8 @@ function goingHomepage(){
     let goHome = document.querySelector("#batteryWarning").classList.add("d-none")
     let statusToHome = document.querySelector("#statusWarning").classList.add("d-none")
     document.querySelector("#homepage").classList.remove("d-none")
+    document.querySelector("#lastCredit").classList.add("d-none")
+    document.querySelector("#dateManual").classList.add("d-none")
 }
 
 function goingSMS(){
@@ -207,6 +209,14 @@ function checkupResults(){
 function goingDeliveryManual(){
     document.querySelector("#checkupResultsManual").classList.add("d-none")
     document.querySelector("#deliveryManual").classList.remove("d-none")
+}
+function goBill(){
+    document.querySelector("#diLast").classList.add("d-none")
+    document.querySelector("#billTier").classList.remove("d-none")
+}
+function payButtonLast(){
+    document.querySelector("#billTier").classList.add("d-none")
+    document.querySelector("#lastCredit").classList.remove("d-none")
 }
 
 
