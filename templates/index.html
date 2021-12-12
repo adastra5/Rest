@@ -389,7 +389,69 @@
                             </tbody>
                           </table>
                           <div class="col-md-12">
-                            <a href="#" onclick="goingCheckup()" class="btn btn-primary rounded-pill">Approve & Start</a>
+                            <a href="#" onclick="goingDelivery()" class="btn btn-primary rounded-pill">Approve & Start</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-none" id="test"> <!--Date Time picker delivery-->
+                        <div class="container">
+                            <div class="panel panel-primary">
+                            <h1 class="panel-heading mb-3">Schedule an Delivery</h1>
+                            <h4 class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur sunt, ut sequi unde quisquam neque veritatis ullam culpa est architecto?</h4>
+                                <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Date</label>
+                                            <input type="date" class="form-control" id="appointmentDate3">
+                                        </div>
+                                    </div>
+                                    <div class='col-md-6'>
+                                        <div class="form-group">
+                                            <label class="control-label" >Time</label>
+                                            <div class='input-group date' id='datetimepicker1'>
+                                            <input type='time' class="form-control" id="appointmentTime3" />
+                                            <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Location</label>
+                                            <input type="text" value="KTO Karatay Üniversitesi -  Karatay/Konya" class="form-control" name="location" id="location3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn btn-primary" onclick="submitFuncStatusDelivery()" value="Submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-none" id="test2"> <!--Appointment information-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md 12">
+                                    <div class="card bg-dark text-light">
+                                       
+                                        <div class="card-body">
+                                        <h2 class="card-title">Your Delivery is Scheduled</h2>
+                                        <p class="card-text" id="appointmentInfo">
+                                            <ul class="list-unstyled lead">
+                                                <li id="dateInfo3"></li>
+                                                <li id="timeInfo3"></li>
+                                                <li id="locationInfo3"></li>
+                                                <li><span class="font-weight-bold">Your Rest assistant :</span> Tunahan Türkmen</li>
+                                                <li id="chargeCost"></li>
+                                            </ul>
+                                        </p>
+                                        <a href="#" onclick="goingSMS()" class="" style="background: transparent; opacity: 0;">SMS Webpage</a><!--Daha sonra anasayfaya dönderecek!!-->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

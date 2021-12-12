@@ -92,6 +92,20 @@ function submitFuncStatus(){
     let locationInfo = document.querySelector("#locationInfo2").innerHTML = `<span class="font-weight-bold">in </span class="font-weight-bold"> ${localStorage.getItem("locationStatus")}`
     
 }
+function submitFuncStatusDelivery(){
+    let appointmentDate = document.querySelector("#appointmentDate3")
+    localStorage.setItem("dateStatusDelivery", appointmentDate.value);
+    let appointmentTime = document.querySelector("#appointmentTime3")
+    localStorage.setItem("timeStatusDelivery", appointmentTime.value);
+    let getLocation = document.querySelector("#location3")
+    localStorage.setItem("locationStatusDelivery", getLocation.value)
+    let secondStep = document.querySelector("#test").classList.add("d-none")
+    let thirdStep = document.querySelector("#test2").classList.remove("d-none")
+    let dateInfo = document.querySelector("#dateInfo3").innerHTML = `<span class="font-weight-bold">See you on </span class="font-weight-bold"> ${localStorage.getItem("dateStatusDelivery")}`
+    let timeInfo = document.querySelector("#timeInfo3").innerHTML = `<span class="font-weight-bold">at </span class="font-weight-bold"> ${localStorage.getItem("timeStatusDelivery")}`
+    let locationInfo = document.querySelector("#locationInfo3").innerHTML = `<span class="font-weight-bold">in </span class="font-weight-bold"> ${localStorage.getItem("locationStatusDelivery")}`
+    
+}
 
 function goingHomepage(){
     let goHome = document.querySelector("#batteryWarning").classList.add("d-none")
@@ -128,6 +142,10 @@ function payButton(){
 function goingResults(){
     document.querySelector("#checkupPage").classList.add("d-none")
     document.querySelector("#checkupResults").classList.remove("d-none")
+}
+function goingDelivery(){
+    document.querySelector("#checkupResults").classList.add("d-none")
+    document.querySelector("#test").classList.remove("d-none")
 }
 
 
