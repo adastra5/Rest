@@ -125,6 +125,10 @@ function payButton(){
     document.querySelector("#sixthStep").classList.add("d-none")
     document.querySelector("#seventhStep").classList.remove("d-none")
 }
+function goingResults(){
+    document.querySelector("#checkupPage").classList.add("d-none")
+    document.querySelector("#checkupResults").classList.remove("d-none")
+}
 
 
 

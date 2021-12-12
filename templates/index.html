@@ -314,7 +314,40 @@
                         </div>
                     </div>
                     <div class="row d-none" id="checkupPage">
-                        <h3 class="text-center">Checkup Results</h3>
+                        <div class="container">
+                            <div class="row justify-content-center"><div class="co-md-12"><h1 class="mb-3">Diagnose Result</h1></div></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3><u>Action</u></h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3><u>Cost</u></h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3><u>Fix Duration</u></h3>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-md-4">
+                                    <h4>Tire Pressure</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>$100</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>2 hours</h4>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary rounded-pill">Approve & Start Repair</a>
+                            <a href="#" onclick="goingResults()" class="btn btn-primary rounded-pill">Approve & Checkup(*)</a>
+                            <a href="#" class="btn btn-primary rounded-pill">No, Thanks</a>
+                            <h6 class="mt-5">(*) Checkup service $50 duration one day.</h6>
+                        </div>
+                    </div>
+                    <div class="row d-none" id="checkupResults">
+                        <div class="col-md-12">
+                            <h1 class="mb-4">Checkup Results</h1>
+                        </div>
                         <table class="table table-striped table-dark">
                             <thead>
                               <tr>
@@ -326,9 +359,16 @@
                             <tbody>
                               <tr>
                                 <th scope="row">
-                                    <input type="checkbox" value ="100" id="far" onclick="totalIt()" name="product">
+                                    <input type="checkbox" value ="100" id="tirePressure" onclick="totalIt()" name="product">
                                 </th>
-                                <td>Far</td>
+                                <td>Tire Pressure</td>
+                                <td id="farID">100$</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">
+                                    <input type="checkbox" value ="100" id="Headlight" onclick="totalIt()" name="product">
+                                </th>
+                                <td>Headlight</td>
                                 <td id="farID">100$</td>
                               </tr>
                               <tr>
@@ -344,12 +384,17 @@
                               <tr>
                                 <th scope="row"></th>
                                 <td>Total Cost</td>
-                                <td id="totalID" name="total"  class="text-center">$100</td>
+                                <td id="totalID" name="total"  class="text-center"></td>
                               </tr>
                             </tbody>
                           </table>
+                          <div class="col-md-12">
+                            <a href="#" onclick="goingCheckup()" class="btn btn-primary rounded-pill">Approve & Start</a>
+                            </div>
+                        </div>
                     </div>
-                </div> 
+                
+
             </div><!--car status warning end-->
         </main>
 
