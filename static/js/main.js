@@ -8,13 +8,14 @@ async function main(){
     if (batteryValue <= 20){
         batteryWarning = document.querySelector("#batteryWarning")
         batteryWarning.classList.remove("d-none")
+        document.querySelector("#homepage").classList.add("d-none")
     }
     
 }
 
 main()
 async function data(){
-    let response = await fetch("http://127.0.0.1:5000/json/car_status.json")
+    let response = await fetch("http://127.0.0.1/json/car_status.json")
     let json = await response.json()
     batteryValue = json.stateofcharge.value
 }
@@ -40,9 +41,9 @@ function totalIt() {
   }
 
 function callHelperr() {
-    let warningText = document.querySelector("#warningText").classList.add("d-none")
-    let infoText = document.querySelector("#infoText").classList.add("d-none")
-    let removeButtons = document.querySelector("#twoButtons1").classList.add("d-none")
+    let warningText = document.querySelector("#warningText12").classList.add("d-none")
+    let infoText = document.querySelector("#infoText12").classList.add("d-none")
+    let removeButtons = document.querySelector("#twoButtons12").classList.add("d-none")
     let secondStep = document.querySelector("#secondStep").classList.remove("d-none")
 }
 function callHelperStatus(){
@@ -52,9 +53,9 @@ function callHelperStatus(){
     let secondStep = document.querySelector("#secondStepStatus").classList.remove("d-none")
 }
 function nearestStations(){
-    let warningText = document.querySelector("#warningText").classList.add("d-none")
-    let infoText = document.querySelector("#infoText").classList.add("d-none")
-    let removeButtons = document.querySelector("#twoButtons1").classList.add("d-none")
+    let warningText = document.querySelector("#warningText12").classList.add("d-none")
+    let infoText = document.querySelector("#infoText12").classList.add("d-none")
+    let removeButtons = document.querySelector("#twoButtons12").classList.add("d-none")
     let nearestStep = document.querySelector("#nearestStation").classList.remove("d-none")
 }
 function nearestServices(){
@@ -106,10 +107,39 @@ function submitFuncStatusDelivery(){
     let locationInfo = document.querySelector("#locationInfo3").innerHTML = `<span class="font-weight-bold">in </span class="font-weight-bold"> ${localStorage.getItem("locationStatusDelivery")}`
     
 }
+function dataSubmit(){
+    let appointmentDate = document.querySelector("#appointmentDateManual")
+    localStorage.setItem("dateManual", appointmentDate.value);
+    let appointmentTime = document.querySelector("#appointmentTimeManual")
+    localStorage.setItem("timeManual", appointmentTime.value);
+    let getLocation = document.querySelector("#locationManual")
+    localStorage.setItem("locationManual", getLocation.value)
+    let secondStep = document.querySelector("#dateManual").classList.add("d-none")
+    let thirdStep = document.querySelector("#appointmentManual").classList.remove("d-none")
+    let dateInfo = document.querySelector("#dateInfoManual").innerHTML = `<span class="font-weight-bold">See you on </span class="font-weight-bold"> ${localStorage.getItem("dateManual")}`
+    let timeInfo = document.querySelector("#timeInfoManual").innerHTML = `<span class="font-weight-bold">at </span class="font-weight-bold"> ${localStorage.getItem("timeManual")}`
+    let locationInfo = document.querySelector("#locationInfoManual").innerHTML = `<span class="font-weight-bold">in </span class="font-weight-bold"> ${localStorage.getItem("locationManual")}`
+    
+}
+function deliveryLast(){
+    let appointmentDate = document.querySelector("#appointmentDateLast")
+    localStorage.setItem("dateLast", appointmentDate.value);
+    let appointmentTime = document.querySelector("#appointmentTimeLast")
+    localStorage.setItem("timeLast", appointmentTime.value);
+    let getLocation = document.querySelector("#locationLast")
+    localStorage.setItem("locationLast", getLocation.value)
+    let secondStep = document.querySelector("#deliveryManual").classList.add("d-none")
+    let thirdStep = document.querySelector("#deliveryInfoLast").classList.remove("d-none")
+    let dateInfo = document.querySelector("#dateInfoDelivery").innerHTML = `<span class="font-weight-bold">See you on </span class="font-weight-bold"> ${localStorage.getItem("dateLast")}`
+    let timeInfo = document.querySelector("#timeInfoDelivery").innerHTML = `<span class="font-weight-bold">at </span class="font-weight-bold"> ${localStorage.getItem("timeLast")}`
+    let locationInfo = document.querySelector("#locationInfoDelivery").innerHTML = `<span class="font-weight-bold">in </span class="font-weight-bold"> ${localStorage.getItem("locationLast")}`
+    
+}
 
 function goingHomepage(){
     let goHome = document.querySelector("#batteryWarning").classList.add("d-none")
     let statusToHome = document.querySelector("#statusWarning").classList.add("d-none")
+    document.querySelector("#homepage").classList.remove("d-none")
 }
 
 function goingSMS(){
@@ -155,6 +185,30 @@ function payButton2(){
     document.querySelector("#payTier").classList.add("d-none")
     document.querySelector("#lastPage").classList.remove("d-none")
 }
+
+function manuelAssistant(){
+    document.querySelector("#homepage").classList.add("d-none")
+    document.querySelector("#testLast").classList.remove("d-none")
+}
+
+function getCheckup(){
+    document.querySelector("#testLast").classList.add("d-none")
+    document.querySelector("#dateManual").classList.remove("d-none")
+
+}
+function goingArrivedMessage(){
+    document.querySelector("#appointmentManual").classList.add("d-none")
+    document.querySelector("#arrivedMessage").classList.remove("d-none")
+}
+function checkupResults(){
+    document.querySelector("#arrivedMessage").classList.add("d-none")
+    document.querySelector("#checkupResultsManual").classList.remove("d-none")
+}
+function goingDeliveryManual(){
+    document.querySelector("#checkupResultsManual").classList.add("d-none")
+    document.querySelector("#deliveryManual").classList.remove("d-none")
+}
+
 
 
 
