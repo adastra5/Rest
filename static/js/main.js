@@ -9,7 +9,7 @@ async function main(){
         batteryWarning = document.querySelector("#batteryWarning")
         batteryWarning.classList.remove("d-none")
     }
-    //calculateTotal()
+    
 }
 
 main()
@@ -25,12 +25,7 @@ let chargeCost = 50
 let estimatedCost = document.querySelector("#chargeCost")
 estimatedCost.innerHTML = `<span class="font-weight-bold">Total Estimated Cost:</span> ${serviceCost+chargeCost}$`
 
-// function calculateTotal(){
-//     let farCost = document.getElementById("farID").innerHTML
-//     farCost = farCost.substring(0,farCost.length-1)
-//     farCost = parseInt(farCost)
-//     items.push({selected:false,value=farCost})
-// }
+
 document.getElementsByName("total")[0].value = "$" + total.toFixed(2);
 
 function totalIt() {
@@ -92,9 +87,9 @@ function submitFuncStatus(){
     localStorage.setItem("locationStatus", getLocation.value)
     let secondStep = document.querySelector("#secondStepStatus").classList.add("d-none")
     let thirdStep = document.querySelector("#thirdStepStatus").classList.remove("d-none")
-    let dateInfo = document.querySelector("#dateInfo2").innerHTML = `<span class="font-weight-bold">Date:</span class="font-weight-bold"> ${localStorage.getItem("dateStatus")}`
-    let timeInfo = document.querySelector("#timeInfo2").innerHTML = `<span class="font-weight-bold">Time:</span class="font-weight-bold"> ${localStorage.getItem("timeStatus")}`
-    let locationInfo = document.querySelector("#locationInfo2").innerHTML = `<span class="font-weight-bold">Meeting Place:</span class="font-weight-bold"> ${localStorage.getItem("locationStatus")}`
+    let dateInfo = document.querySelector("#dateInfo2").innerHTML = `<span class="font-weight-bold">See you on </span class="font-weight-bold"> ${localStorage.getItem("dateStatus")}`
+    let timeInfo = document.querySelector("#timeInfo2").innerHTML = `<span class="font-weight-bold">at </span class="font-weight-bold"> ${localStorage.getItem("timeStatus")}`
+    let locationInfo = document.querySelector("#locationInfo2").innerHTML = `<span class="font-weight-bold">in </span class="font-weight-bold"> ${localStorage.getItem("locationStatus")}`
     
 }
 

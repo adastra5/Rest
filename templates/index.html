@@ -49,7 +49,7 @@
         </header>
 
         <main role="main" class="inner cover">
-            <div id="batteryWarning" class=""><!--Battery warning start-->
+            <div id="batteryWarning" class="d-none"><!--Battery warning start-->
             <h1 class="cover-heading" id="warningText">Your battery is low.</h1>
             <p class="lead" id="infoText">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
             <div class="container">
@@ -215,7 +215,7 @@
                 
             
             </div> <!--battery warning end-->
-            <div id="statusWarning" class="d-none"> <!--status warning start-->
+            <div id="statusWarning" class=""> <!--status warning start-->
                 <h1 class="cover-heading" id="warningText2">Your tire pressure is low!</h1>
                 <p class="lead" id="infoText2">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
                 <div class="container">
@@ -273,6 +273,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <input type="submit" class="btn btn-primary mr-5" onclick="goingHomepage()" value="Cancel">
                                 <input type="submit" class="btn btn-primary" onclick="submitFuncStatus()" value="Submit">
                                 </div>
                             </div>
@@ -306,24 +307,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md 12">
-                                    <div class="card bg-dark text-light">
-                                       
-                                        <div class="card-body">
-                                        <h2 class="card-title">Estimated Cost</h2>
-                                        <p class="card-text" id="">
-                                            <ul class="list-unstyled lead">
-                                                <li id="dateInfo2"></li>
-                                                <li id="timeInfo2"></li>
-                                                <li id="locationInfo2"></li>
-                                                <li><span class="font-weight-bold">Tire Pressure Cost:</span> 50$</li>
-                                                <li id="chargeCost"></li>
-                                            </ul>
-                                        </p>
-                                        <a href="#" onclick="goingHomepage()" class="btn btn-primary rounded-pill">Homepage</a>
-                                        <a href="#" onclick="goingCheckup()" class="btn btn-primary rounded-pill">For Checkup</a>
-                                        <a href="#" onclick="goingCheckup()" class="btn btn-primary rounded-pill">Test</a>
-                                        </div>
-                                    </div>
+                                    <h1>Your car is arrived. Don't worry :)</h1>
+                                    <a href="#" onclick="goingCheckup()" class="btn btn-primary rounded-pill" style="opacity: 0;">Test</a>
                                 </div>
                             </div>
                         </div>
