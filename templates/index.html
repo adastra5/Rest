@@ -448,13 +448,44 @@
                                                 <li id="chargeCost"></li>
                                             </ul>
                                         </p>
-                                        <a href="#" onclick="goingSMS()" class="" style="background: transparent; opacity: 0;">SMS Webpage</a><!--Daha sonra anasayfaya dönderecek!!-->
+                                        <a href="#" onclick="goingPay()" class="" style="background: transparent; opacity: 0;">SMS Webpage</a><!--Daha sonra anasayfaya dönderecek!!-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="d-none" id="payTier">
+                        <h1 class="cover-heading" id="warningText">Bills</h1>
+                        <h2 class="lead" >
+                            <ul class="list-unstyled">
+                                <li mb-2>Checkup : 50$</li>
+                                <li mb-2>Tire Preasure : 100$</li>
+                                <li mb-2>Headlight : 100$</li>
+                                <li mb-2>Total Cost: 250$</li>
+                            </ul>
+                        </h2>
+                        <div class="row" id="twoButtons1"> 
+                            <div class="col-12 rounded-pill">    
+                                <p class="lead">
+                                <a href="#" onclick="payButton2()" id="callButton" class="btn btn-lg btn-success">Pay</a>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="d-none" id="lastPage"><!--Delivered message with hidden button-->
+                        <h2 class="">12.5 Rest coin added to your wallet!</h2><br>
+                        <h2 class="">You can use it for all e-car services or app store!</h2>
+                        
+                        <div class="col-12">    
+                                <p class="lead">
+                                <a href="#" onclick="goingHomepage()" id="callButton" class="btn btn-lg btn-secondary mt-5">Homepage</a>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    
                 
 
             </div><!--car status warning end-->

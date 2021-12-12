@@ -147,6 +147,14 @@ function goingDelivery(){
     document.querySelector("#checkupResults").classList.add("d-none")
     document.querySelector("#test").classList.remove("d-none")
 }
+function goingPay(){
+    document.querySelector("#test2").classList.add("d-none")
+    document.querySelector("#payTier").classList.remove("d-none")
+}
+function payButton2(){
+    document.querySelector("#payTier").classList.add("d-none")
+    document.querySelector("#lastPage").classList.remove("d-none")
+}
 
 
 
