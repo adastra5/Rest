@@ -1,1 +1,1 @@
-# assist.me
+# Mercedes-Benz Starhack Hackathon Rest Project
